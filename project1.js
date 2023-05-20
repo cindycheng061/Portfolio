@@ -1,5 +1,4 @@
 const imageBox = document.getElementById("image-box");
-
 const readHeader = document.getElementById("read");
 readHeader.addEventListener("mouseover", () => {
   imageBox.style.backgroundImage = `url("image/Read.jpg")`;
