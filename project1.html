@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project One-Image Gallery</title>
+    <title>Document</title>
     <style>
       * {
         margin: 0;
@@ -12,54 +12,147 @@
         font-family: "poppins", sans-serif;
         box-sizing: border-box;
       }
+      a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        background-color: mistyrose;
+        padding: 32px 16px;
+      }
+      h2 {
+        background-color: mistyrose;
+        font-size: 1.5rem;
+        font-family: cursive;
+        text-align: center;
+      }
+
       .hero {
         width: 100%;
-        height: 150vh;
-        background-color: #f3f7f1;
+        height: 100vh;
+        background-color: mistyrose;
         position: relative;
         display: flex;
-        align-items: center;
         justify-content: space-around;
       }
+
       .hero h1 {
-        font-size: 4rem;
+        font-size: 1.5rem;
         position: relative;
         z-index: 2;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 2px black;
         cursor: pointer;
-        transition: all 0.5s ease;
-      }
-      .hero h1:hover {
-        -webkit-text-fill-color: black;
-        transform: translateY(-10px);
-      }
-      .img_box {
-        /* display: none; */
-        justify-content: center;
+        top: 50%;
         text-align: center;
+        font-family: cursive;
+      }
+      @media (min-width: 768px) {
+        .hero h1 {
+          font-size: 4rem;
+          position: relative;
+          z-index: 2;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 2px black;
+          cursor: pointer;
+          top: 50%;
+          text-align: center;
+          font-family: cursive;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+      }
+      .walk {
+        height: 100%;
+        width: 25%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.5s ease;
+      }
+      .relax {
+        height: 100%;
+        width: 25%;
+        position: absolute;
+        top: 0;
+        left: 25%;
+        opacity: 0;
+        transition: 0.5s ease;
+      }
+      .read {
+        height: 100%;
+        width: 25%;
+        position: absolute;
+        top: 0;
+        right: 25%;
+        opacity: 0;
+        transition: 0.5s ease;
+      }
+      .dream {
+        height: 100%;
+        width: 25%;
         position: absolute;
         top: 0;
         right: 0;
-        height: 100%;
-        width: 50%;
-        /* background-image: url(image/Walk.jpg); */
-        background-size: cover;
-        background-position: center;
+        opacity: 0;
+        transition: 0.5s ease;
+      }
+      .container {
+        position: relative;
+      }
+      .container1:hover h1 {
+        -webkit-text-fill-color: black;
+        transform: translateY(-10px);
+      }
+      .container1:hover img {
+        opacity: 1;
+      }
+
+      .container2:hover h1 {
+        -webkit-text-fill-color: black;
+        transform: translateY(-10px);
+      }
+      .container2:hover img {
+        opacity: 1;
+      }
+      .container3:hover h1 {
+        -webkit-text-fill-color: black;
+        transform: translateY(-10px);
+      }
+      .container3:hover img {
+        opacity: 1;
+      }
+      .container4:hover h1 {
+        -webkit-text-fill-color: black;
+        transform: translateY(-10px);
+      }
+      .container4:hover img {
+        opacity: 1;
       }
     </style>
   </head>
-  <header>
-    <h2>Project One</h2>
-  </header>
   <body>
+    <a href="index.html">go back</a>
+    <h2>Life on my own.</h2>
     <div class="hero">
-      <h1 id="walk">Walk.</h1>
-      <h1 id="relax">Relax.</h1>
-      <h1 id="read">Read.</h1>
-      <h1 id="dream">Dream.</h1>
-      <div id="image-box" class="img_box"></div>
-      <script src="project1.js"></script>
+      <div class="container1">
+        <h1>Walk.</h1>
+        <img src="image/Walk.jpg" alt="walk" class="walk" />
+      </div>
+      <div class="container2">
+        <h1>Relax.</h1>
+        <img src="image/Relax.jpg" alt="relax" class="relax" />
+      </div>
+
+      <div class="container3">
+        <h1>Read.</h1>
+        <img src="image/Read.jpg" alt="read" class="read" />
+      </div>
+      <div class="container4">
+        <h1>Dream.</h1>
+        <img src="image/Dream.jpg" alt="relax" class="dream" />
+      </div>
     </div>
   </body>
 </html>

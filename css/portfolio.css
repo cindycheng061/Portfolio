@@ -67,11 +67,19 @@ select {
 }
 /* general */
 h2 {
-  margin-bottom: 54px;
+  margin-bottom: 32px;
 }
-/* header */
+/* header*/
+header button {
+  all: unset;
+}
+.hamburger-icon {
+  height: 50px;
+}
 .header_logocontainer img {
   height: 48px;
+  width: 54px;
+  border-radius: 50%;
 }
 .header_logocontainer p {
   font-weight: bolder;
@@ -91,9 +99,29 @@ h2 {
 }
 
 .header_nav {
-  display: flex;
+  display: none;
 }
-
+.mobileheader_nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 16px;
+  text-align: right;
+}
+.display-none {
+  display: none;
+}
+@media (min-width: 768px) {
+  .mobileheader_nav {
+    display: none;
+  }
+  .hamburger-icon {
+    display: none;
+  }
+  .header_nav {
+    display: flex;
+  }
+}
 #header_container {
   display: flex;
   justify-content: space-between;
@@ -111,34 +139,46 @@ h2 {
   opacity: 0.6;
   width: 100%;
   height: inherit;
+  margin-bottom: 32px;
 }
 
 .homehero_content {
   position: absolute;
-  top: 12%;
+  top: 16px;
   opacity: 2;
   text-align: center;
-  left: 16%;
+  left: 16px;
+  right: 16px;
   color: white;
 }
-
+@media (min-width: 768px) {
+  .homehero_content {
+    position: absolute;
+    top: 54px;
+    opacity: 2;
+    text-align: center;
+    left: 32px;
+    right: 32px;
+    color: white;
+  }
+}
 #homehero h1 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   padding: 48px 8px;
 }
 #homehero p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 56px;
   margin-left: 8px;
   margin-right: 8px;
 }
+
 .homehero_btn {
   color: black;
   text-decoration: none;
   border-radius: 4px;
   background-color: white;
   padding: 16px 54px;
-  margin-top: 84px;
   font-size: 1rem;
   display: inline-block;
   transition: all 0.3s ease-in-out;
@@ -150,20 +190,50 @@ h2 {
   background-color: rgba(255, 255, 255, 0.7);
   transform: translatey(-10px);
 }
+@media (min-width: 768px) {
+  #homehero h1 {
+    font-size: 2rem;
+    padding: 48px 8px;
+  }
+  #homehero p {
+    font-size: 1.5rem;
+    margin-bottom: 56px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .homehero_btn {
+    font-size: 1rem;
+    padding: 16px 84px;
+  }
+}
 /* body second section */
+
 #homeabout {
-  display: flex;
-  height: 80vh;
+  /* display: flex; */
+  height: 150vh;
   background-color: #f9fafb;
 }
+
 #homeabout .intro,
 .skills {
-  width: 50%;
-  padding: 54px 32px;
+  /* width: 50%; */
+  padding: 32px 32px;
 }
-/* #homeabout h2 goes to general{
-  margin-bottom: 54px;
-} */
+@media (min-width: 768px) {
+  #homeabout {
+    display: flex;
+    height: 80vh;
+    background-color: #f9fafb;
+  }
+  #homeabout .intro,
+  .skills {
+    width: 50%;
+    padding: 54px 32px;
+  }
+}
+#homeabout h2 {
+  margin-bottom: 32px;
+}
 #homeabout p {
   line-height: 32px;
 }
@@ -198,23 +268,41 @@ h2 {
   background-color: #e5e7eb;
 }
 /* body third section Project */
-.projectone {
+.project1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.projectone img {
-  height: 80vh;
+.project2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+@media (min-width: 768px) {
+  .project1 img,
+  .project2 img {
+    height: 50vh;
+    margin: 16px 54px;
+  }
+}
+/* .projectone img {
+  display: none;
+} */
+
 #project h2,
 #project p {
   text-align: center;
+  padding: 12px;
 }
 #project h2 {
-  margin-top: 54px;
+  margin-top: 24px;
 }
 #project p {
-  margin-bottom: 54px;
+  margin-bottom: 16px;
+}
+
+#project .primary_btn {
+  margin-left: 24px;
 }
 /* body forth section Contact */
 label,

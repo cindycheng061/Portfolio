@@ -10,9 +10,24 @@
   <header>
     <div id="header_container">
       <div class="header_logocontainer">
-        <img src="image/personal_photo.png" alt="" />
+        <img src="image/personal_photo.jpg" alt="" />
         <p>Xiaoxin (Cindy) Cheng</p>
       </div>
+      <button class="hamburger_button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="hamburger-icon"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+
       <div class="header_nav">
         <ul>
           <li>
@@ -35,6 +50,28 @@
           </li>
         </ul>
       </div>
+    </div>
+    <div class="mobileheader_nav display-none">
+      <ul>
+        <li>
+          <a href="#header_container">Home</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#homeabout">About</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#project">Project</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
     </div>
   </header>
   <body>
@@ -76,24 +113,28 @@
     <section id="project">
       <h2>Project</h2>
       <p>All projects are completed during Shecodes cohort</p>
-      <div class="projectone">
-        <div><img src="image/powerstation.png" href="#" /></div>
+      <div class="project1">
+        <div class="image">
+          <img src="image/icons8-coding-250.png" href="#" />
+        </div>
         <div>
-          <h2>nuclear power station</h2>
+          <h2>Html/CSS</h2>
           <p>
-            add some content inadd some content inadd some content inadd some
-            content inadd some content inadd some content in
+            This project uses HTML/CSS to achieve responsive images. The
+            challenges lie in configuring transitions and setting up layers.
           </p>
           <a href="project1.html" class="primary_btn">Details</a>
         </div>
       </div>
-      <div class="projectone">
-        <div><img src="image/powerstation.png" href="#" /></div>
+      <div class="project2">
+        <div class="image">
+          <img src="image/icons8-coding-250.png" href="#" />
+        </div>
         <div>
-          <h2>nuclear power station</h2>
+          <h2>Python/Javascript</h2>
           <p>
-            add some content inadd some content inadd some content inadd some
-            content inadd some content inadd some content in
+            Will use Python/Javascript to achieve some mpre projects (website
+            building/data analyse/visualization) later on in shecodes cohort
           </p>
           <a href="" class="primary_btn">Details</a>
         </div>
@@ -140,4 +181,5 @@
     </div>
     <small>website made with 💖 by Xiaoxin (Cindy) Cheng</small>
   </footer>
+  <script src="js/script.js"></script>
 </html>
