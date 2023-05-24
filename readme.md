@@ -3,6 +3,7 @@
 # {{ Xiaoxin(Cindy) CHENG}} - Portfolio Task
 
 [My portfolio site]({{https://github.com/cindycheng061/portfolio}})
+https://cindycheng061.github.io/portfolio/
 
 ## Project Requirements###
 
